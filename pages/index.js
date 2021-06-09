@@ -1,5 +1,4 @@
 import { Typography, useTheme } from '@material-ui/core'
-import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
 import Movies from '../components/Movies'
