@@ -14,6 +14,7 @@ export default function MovieCard({ movie, handleLikeMovie, handleDeleteMovie })
         <Typography variant="body2">{movie.category}</Typography>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <IconButton
+            aria-label="Toggle like"
             style={{
               color:
                 movie.liked === true
@@ -26,7 +27,7 @@ export default function MovieCard({ movie, handleLikeMovie, handleDeleteMovie })
           >
             {movie.liked ? <ThumbUp /> : movie.liked === false ? <ThumbDown /> : <ThumbsUpDown />}
           </IconButton>
-          <IconButton onClick={() => handleDeleteMovie(movie.id)}>
+          <IconButton aria-label="Delete movie" onClick={() => handleDeleteMovie(movie.id)}>
             <Close fontSize="small" />
           </IconButton>
         </div>

@@ -108,6 +108,7 @@ export default function Movies({ allMovies }) {
       <Grid container spacing={2}>
         {filteredMovies &&
           filteredMovies.map((movie, i) => {
+            // handle page
             if (limit && i >= limit * page) return null
             if (limit && page > 1 && i < limit * (page - 1)) return null
             return (
