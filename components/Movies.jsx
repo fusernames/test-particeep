@@ -87,6 +87,7 @@ export default function Movies({ allMovies }) {
       <Grid container spacing={2} style={{ marginBottom: 24 }}>
         <Grid item xs={12} sm={6} md={3}>
           <TextField
+            id="categories"
             label="Categories"
             fullWidth
             onChange={handleCategoryChange}
@@ -102,7 +103,7 @@ export default function Movies({ allMovies }) {
           </TextField>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
-          <TextField label="Per page" fullWidth value={limit} onChange={handleLimitChange} />
+          <TextField id="limit" label="Per page" fullWidth value={limit} onChange={handleLimitChange} />
         </Grid>
       </Grid>
       <Grid container spacing={2}>
